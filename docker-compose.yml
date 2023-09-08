@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mariadbx:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'databaser'
+      MYSQL_DATABASE: 'reservation'
+      MYSQL_USER: 'rez'
+      MYSQL_PASSWORD: 'database'
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - my_network
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  mysql-data:
+      
+
