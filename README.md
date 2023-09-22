@@ -18,13 +18,13 @@ You can run the application by following these steps:
 
 1. Clone this project:
 
-git clone project-repo-url
+git clone "project-repo-url"
 
 
 
 2. Navigate to the project directory:
 
-cd project-directory
+cd "project-directory"
 
 
 
@@ -42,7 +42,7 @@ docker ps
 
 Get the ID of the MariaDB container and determine its IP address with the following command:
 
-docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mariadb-container-id
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "mariadb-container-id"
 
 
 
