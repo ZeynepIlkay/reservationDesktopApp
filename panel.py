@@ -168,7 +168,7 @@ class Ui_MainWindow(object):
         item = self.tableWidget.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "END TIME"))
         self.removeButton.setText(_translate("MainWindow", "REMOVE"))
-        self.label.setText(_translate("MainWindow", "SIEMENS PANEL REZERVATION APPLICATION"))
+        self.label.setText(_translate("MainWindow", "PANEL REZERVATION APPLICATION"))
         self.name_label.setText(_translate("MainWindow", "NAME-SURNAME"))
         self.panel_label.setText(_translate("MainWindow", "PANEL"))
         self.time_label.setText(_translate("MainWindow", "How many hours do you want to reserve?"))

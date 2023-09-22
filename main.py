@@ -15,6 +15,8 @@ import database_connection
 #
 
 
+
+
 #interface oparations
 #-----------------------------
 
@@ -145,12 +147,13 @@ def add_reservation():
                     add_reservations = "INSERT INTO reservation(users_user_id,panel_panel_id,rTime,rStatus,user_name) VALUES (%s,%s,%s,%s,%s)"
                     cursor.execute(add_reservations,(last_inserted_id,panel,end_time(),"not available",last_inserted_user_name,))
 
-                    webhook(name, panel, end_time())
+                    
 
                     #result
                     mysqldb.commit()            
                     list_record()
                     print(" bağlantısı kapatıldı (try blogu).")
+                    webhook(name, panel, end_time())
                     ui.name_edit.clear()
                     ui.panel_edit.clear()
                     ui.time_edit.clear()
@@ -339,7 +342,7 @@ def panels():
 
 
 def webhook(name,panel,time):
-    url ='https://siemens.webhook.office.com/webhookb2/2728de57-dc47-4d87-a152-3bec25fb8700@38ae3bcd-9579-4fd4-adda-b42e1495d55a/IncomingWebhook/1bf02a01afbc459d81afe307cb4cf5e8/0405d3d5-f97b-4851-9115-77e36f8e41cc'
+    url ='https://example.webhook.office.com/'
     payload = {
         "title": panel,
         "text" : name + ", " + panel + " panelini " + time + " sonuna kadar rezerve etti."

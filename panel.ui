@@ -164,7 +164,7 @@
      </font>
     </property>
     <property name="text">
-     <string>SIEMENS PANEL REZERVATION APPLICATION</string>
+     <string>PANEL REZERVATION APPLICATION</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
